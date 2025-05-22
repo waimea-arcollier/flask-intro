@@ -1,0 +1,38 @@
+{% extends 'pages/base.jinja'%}
+
+{% block title%}
+    Flask Demo - Balls
+{% endblock %}  
+
+{% block content%}
+    <article>
+        <h2>Form</h2>
+
+        <form method="POST" action="/processForm">
+
+            <fieldset>
+                <label>
+                    Your name
+                    <input
+                        name="name"
+                        type="text"
+                        placeholder="Your Name"
+                        required
+                    >
+                </label>    
+
+                <label>
+                    Your age
+                    <input
+                        name="age"
+                        type="number"
+                        placeholder="Enter Your Age"
+                        required
+                    >
+                </label>
+            </fieldset>
+
+            <input type="submit" value="Submit for advertisement data">
+        </form>
+    </article>
+{% endblock %}
